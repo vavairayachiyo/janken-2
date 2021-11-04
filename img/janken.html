@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/sanitize.css">
+  <link rel="stylesheet" href="css/style.janken.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- <link rel="stylesheet" href="animate.min.css"> -->
+  <title>じゃんけんにチャレンジ！</title>
+</head>
+
+<body>
+  <header class="title-back">
+    <h1 class="animate__animated animate__bounce">じゃんけんにチャレンジ！</h1>
+    <h2>じやんけんに勝ってポイントゲット！！</h2>
+  </header>
+
+  <main>
+    <P>じゃんけんの手を選んでクリック</P>
+    <ul>
+      <li id="gu_btn" class="over" data-value="0" onclick="janken(this)"></li>
+      <li id="cho_btn" class="over" data-value="1" onclick="janken(this)"></li>
+      <li id="par_btn" class="over" data-value="2" onclick="janken(this)"></li>
+    </ul>
+    <br>
+    <div id="output"></div><br>
+    <div id="button"> START</div>
+    <p id="echo">結果は？</p>
+
+    <div class="result_box">
+      <div id="com_hand">コンピュータの出した手は？</div>
+      <div>
+        <img src="img/IMG_2847.JPG" alt="ぐー" id="result">
+      </div>
+      <div id="result">結果は？</div>
+  </main>
+
+  <footer>フッター</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script>
+
+    //スタートをクリックするとグー、チョキ、パーのいずれかがランダムにでる//
+
+    const randumnumber = Math.floor(Math.random() * 3);
+    console.log(randumnumber);
+
+    if (randumnumber === 0) {
+      // alert("ぐー");
+    } else if (randumnumber === 1) {
+      // alert("チョキ");
+    } else if (randumnumber === 2) {
+      // alert("パー");
+    }
+
+
+    $("#botton").on("click", function () {
+      const randumnumber = Math.floor(Math.randum() * 3)
+      console.log(randumnumber);
+
+      if (randumnumber === 0) {
+        alert('ぐー')
+        $("#echo").text("グー");
+        $("#result").atter("<img src='img/j3.JPG'>");
+
+
+      } else if (randumnumber === 1) {
+        alert('チョキ')
+        $("#echo").text("チョキ");
+        $("#result").atter("<img src='img/j2.JPG'>");
+
+      }
+
+      else if (randumnumber === 2) {
+        alert('パー')
+        $("#echo").text("パー");
+        $("#result").atter("<img src='img/j1.JPG'>");
+      }
+
+    })
+
+
+    //じゃんけんの丸をクリックしたら「あなたが選んだのは〇〇ですね」と表示される
+
+    function janken(elem) {
+      var out_gcp = $(elem).data('value');
+      console.log(out_gcp);
+      var text = '';
+      if (out_gcp == 0) {
+        var text = 'グー';
+      }
+      else if (out_gcp == 1) {
+        var text = 'チョキ';
+      }
+      else if (out_gcp == 2) {
+        var text = 'パー';
+      }
+      console.log(text);
+      $("#output").text('あなたは' + text + 'で勝負ですね');
+    };
+
+
+  </script>
+
+</body>
+
+</html>

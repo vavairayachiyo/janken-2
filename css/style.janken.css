@@ -1,0 +1,149 @@
+body{
+    margin: 20px;
+    padding:0;
+    text-align:center;
+    font-size: 16px;
+    min-width: 960px;
+}
+h1{
+     color: rgb(21, 192, 192);
+}
+p{color: rgb(21, 192, 192);
+}
+
+.title-back {
+    width: 960px;
+    height: 400px;
+    background-image: url(../img/2663124.jpg);
+    background-size: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.title-back h1 {
+    height: 48px;
+    color: rgb(21, 192, 192);
+    font-size: 2.25rem;
+    position: absolute;
+    margin: 0;
+    top: 0px;
+}
+.title-back h2 {
+    height: 48px;
+    color: rgb(21, 192, 192);
+    font-size: 2.25rem;
+    position: absolute;
+    top: 352px;
+}
+header{
+    /* background: url(../img/2663124.jpg);  */
+    /* border-bottom: 5px solid rgb(207, 6, 59); */
+    text-align: center;
+    padding-top: 1em;
+}
+
+.title_box{
+    background: url(../img/2663124.jpg);
+
+}
+
+main{
+    border: bottom 50px solid rgb(214, 24, 167);
+}
+
+div#button{
+    border-radius: 20px;
+}
+div#button:hover {
+    color: #fff;
+    background-color: rgb(134, 9, 192);
+}
+
+
+
+.result_box{
+   /*background: url(../img/IMG_2847.JPG);
+   background-size: cover;
+    background-position: center;*/
+    height: 800px;
+}
+
+
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    line-height: 2.5;
+    height:100px;
+}
+
+#button{
+    border: 1px solid #666;
+    width: 600px;
+    margin: 0 auto;
+    
+}
+
+ul{
+    display:flex;  
+    justify-content: center;
+    width:100%;
+    position: relative;
+}
+
+li{
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    /* background-color: #FFF; この行削除*/
+    display:block;  /* 定義 */
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 0 10px;
+    line-height: 300px;
+}
+/*.over li:hover{
+    background: rgb(235, 50, 151);
+    color:#fff;
+}　ここは追加しなくてよいです*/
+
+/*　追加していただきたいのはここから　*/
+#gu_btn {
+    background: url(../img/gu.jpg);
+    opacity: 0.8;   
+}
+#gu_btn:hover {
+    border: 5px solid  rgb(235, 50, 151);
+}
+#gu_btn.selected {
+    border: 5px solid  rgb(235, 50, 151);
+}
+
+#cho_btn {
+    background: url(../img/ck.jpg);
+    opacity: 0.8;  
+}
+#cho_btn:hover {
+    border: 5px solid  rgb(235, 50, 151);
+}
+
+#par_btn {
+    background: url(../img/pa.jpg);
+    opacity: 0.8;   
+}
+#par_btn:hover {
+    /* background: rgb(235, 50, 151); */
+    border: 5px solid  rgb(235, 50, 151);
+}
+
+ /* 追加してほしいところ　ここまで*/
+
+footer{
+    background-color:rgb(21, 192, 192);
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
